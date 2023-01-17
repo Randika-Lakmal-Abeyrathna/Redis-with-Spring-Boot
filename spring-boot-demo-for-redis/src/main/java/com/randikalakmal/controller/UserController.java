@@ -47,4 +47,13 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
+    @PutMapping("/user/{id}")
+    public ResponseEntity<String> updateUser(@RequestBody User user, @PathVariable("id") Long id){
+        boolean result  = userService.updateUserById(user,id);
+        if (result)
+            return ResponseEntity.ok("User Updated Successfully");
+        else
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+
 }
