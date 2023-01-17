@@ -10,4 +10,6 @@ public interface UserService {
     List<User> fetchAllUser();
 
     User fetchUserbyId(Long id);
+
+    boolean deleteUser(Long id);
 }
