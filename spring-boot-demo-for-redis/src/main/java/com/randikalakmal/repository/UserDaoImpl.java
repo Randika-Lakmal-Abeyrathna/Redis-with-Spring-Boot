@@ -32,4 +32,11 @@ public class UserDaoImpl implements UserDao{
         users = redisTemplate.opsForHash().values(KEY);
         return users;
     }
+
+    @Override
+    public User fetchUserById(Long id) {
+        User user;
+        user = (User) redisTemplate.opsForHash().get(KEY,id.toString());
+        return user;
+    }
 }
