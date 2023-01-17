@@ -8,4 +8,6 @@ public interface UserService {
     boolean saveUser(User user);
 
     List<User> fetchAllUser();
+
+    User fetchUserbyId(Long id);
 }
