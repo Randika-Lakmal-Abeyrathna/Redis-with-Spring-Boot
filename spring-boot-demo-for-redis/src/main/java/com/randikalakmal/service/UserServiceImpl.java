@@ -5,6 +5,8 @@ import com.randikalakmal.repository.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService{
 
@@ -14,5 +16,10 @@ public class UserServiceImpl implements UserService{
     public boolean saveUser(User user) {
 
         return userDao.saveUser(user);
+    }
+
+    @Override
+    public List<User> fetchAllUser() {
+        return userDao.fetchAllUser();
     }
 }
