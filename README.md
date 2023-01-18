@@ -1,7 +1,7 @@
 # Redis-with-Spring-Boot
 Sample Project Created to test Redis with Spring boot project
 
-Project Inculde the CRUD opertaion in Redis
+Project Inculde the CRUD operation in Redis
 
 ### PostMan Export File is included.
 
